@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/* 400, 700, 800 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: hsl(36, 100%, 99%);
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.container header {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container header .area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.container header .area .logo img {
+    width: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.container header .area .desktop-nav {
+    display: none;
+}
+
+.container header .area .desktop-nav ul {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.container header .area .desktop-nav ul li a {
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+}
+
+.container header .area .menu-opener {
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.container header .area .menu-opener .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5px;
+    height: 100%;
+}
+
+.container header .area .menu-opener .hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+}
+
+.container main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container main .banner {
+    display: flex;
+    flex-direction: column;
+}
+
+.container main .banner .banner-image {
+    background-image: url('../images/image-web-3-mobile.jpg');
+    background-size: cover;
+    height: 330px;
+    margin: 0 15px 20px;
+}
+
+.container main .banner .banner-details .banner-title {
+    font-size: 45px;
+    line-height: 45px;
+    margin: 0 15px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.container main .banner .banner-details .banner-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.container main .banner .banner-details .banner-description .description {
+    line-height: 25px;
+    font-size: 15px;
+    margin: 0 15px 20px;
+}
+
+.container main .banner .banner-details .banner-description .read-more-link {
+    display: inline-block;
+    margin: 0 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: hsl(5, 85%, 63%);
+    padding: 15px 40px;
+    color: #fff;
+    font-weight: 500;
+    transition: .5s;
+    align-self: flex-start;
+}
+
+.container main .banner .banner-details .banner-description .read-more-link:hover {
+    background-color: hsl(240, 100%, 5%);
+}
+
+.container main .news-letter {
+    margin: 60px 15px 60px;
+    padding: 20px;
+    background-color: hsl(240, 100%, 5%);
+}
+
+.container main .news-letter h2 {
+    font-size: 28px;
+    color: hsl(35, 77%, 62%);
+    margin-bottom: 20px;
+}
+
+.container main .news-letter ul li {
+    border-bottom: 1px solid hsl(233, 8%, 79%);
+    padding: 20px 0;
+}
+
+.container main .news-letter ul li:last-child {
+    border: 0;
+    padding: 20px 0 0;
+}
+
+.container main .news-letter ul li h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.container main .news-letter ul li p {
+    color: hsl(233, 8%, 79%);
+    line-height: 30px;
+
+}
+
+.container .posts {
+    padding: 0 15px;
+    margin-bottom: 100px;
+}
+
+.container .posts ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.container .posts ul li {
+    display: flex;
+    column-gap: 20px;
+}
+
+.container .posts ul li img {
+    width: 100px;
+}
+
+.container .posts ul li .post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container .posts ul li .post-content .post-number {
+    font-size: 30px;
+    font-weight: 700;
+    color: hsl(233, 0%, 79%);
+}
+.container .posts ul li .post-content .post-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: hsl(240, 100%, 5%);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.container .posts ul li .post-content .post-title:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+.container .posts ul li .post-content .post-description {
+    font-size: 15px;
+    color: hsl(236, 13%, 42%);
+}
+
+.mobile-nav {
+    background-color: hsl(36, 100%, 99%);
+    width: 240px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 100px;
+    transition: transform .5s ease-out;
+    transform: translateX(240px);
+}
+
+.show {
+    transform: translateX(0px);
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav ul li {
+    padding: 10px 20px;
+}
+
+.mobile-nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.mobile-nav .close-icon {
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    width: 40px;
+    transition: all ease .5s;
+}
+
+.mobile-nav .close-icon span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+}
+
+.mobile-nav .close-icon span:first-child {
+    transform: rotate(45deg);
+}
+
+.mobile-nav .close-icon span:last-child {
+    transform: rotate(-45deg);
+}
+
+@media(min-width:1000px) {
+    .container {
+        max-width: 1110px;
+    }
+
+    .container header .area .desktop-nav {
+        display: flex;
+    }
+    
+    .container header .area .desktop-nav ul li a {
+        transition: .5s;
+    }
+    
+    .container header .area .desktop-nav ul li a:hover {
+        color: hsl(5, 85%, 63%);
+    }
+
+    .container header .area .menu-opener {
+        display: none;
+    }
+
+    .container main {
+        flex-direction: row;
+    }
+
+    .container main .banner {
+        flex: 2;
+    }
+
+    .container main .news-letter {
+        flex: 1;
+        margin: 0 15px 0;
+    }
+
+    .container main .banner .banner-details {
+        display: flex;
+        flex: 1;
+    }
+
+    .container main .banner .banner-details .banner-title {
+        font-size: 50px;
+        line-height: 50px;
+        margin: 0 15px;
+        flex: 1;
+    }
+    .container main .banner .banner-details .banner-description {
+        flex: 1;
+    }
+
+    .container .posts {
+        margin: 60px 0 100px;
+    }
+
+    .container .posts ul {
+        flex-direction: row;
+        column-gap: 20px;
+        padding: 0;
+    }
+
+    .container .posts ul li {
+        flex: 1;
+    }
+}
